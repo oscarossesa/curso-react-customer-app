@@ -1,0 +1,36 @@
+{
+  "customers": [
+    {
+      "dni": "10000",
+      "name": "Gabriel",
+      "age": 10
+    },
+    {
+      "dni": "12000",
+      "name": "Vicente",
+      "age": 12
+    },
+    {
+      "dni": "32000",
+      "name": "Oscar",
+      "age": 32
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

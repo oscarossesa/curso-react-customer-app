@@ -4,7 +4,7 @@ import CustomerListItem from './CustomerListItem';
 
 const CustomersList = ({ customers, urlPath }) => {
 
-   console.log(customers);
+   //console.log('customers', customers);
 
    return (
       <div>

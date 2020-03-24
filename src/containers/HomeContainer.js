@@ -6,7 +6,6 @@ import { withRouter } from 'react-router-dom';
 class HomeContainer extends Component {
 
   handleOnClick = () => {
-    console.log("handle onclick");
     this.props.history.push('/customers');
   }
 

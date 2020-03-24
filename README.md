@@ -45,3 +45,7 @@ https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-
  + npm install redux
  + npm install react-redux
  + npm install redux-actions
+ + npm install json-server --> permite realizar las operatorias rest con datos de prueba
+   + Levantar api REST: json-server --watch db.json --port 3001
+ + npm install --save redux-promise --> middelware, similar a thunk pero que devuelve promise
+ + npm install reselect

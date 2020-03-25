@@ -49,3 +49,4 @@ https://medium.com/@eshwaren/enable-emmet-support-for-jsx-in-visual-studio-code-
    + Levantar api REST: json-server --watch db.json --port 3001
  + npm install --save redux-promise --> middelware, similar a thunk pero que devuelve promise
  + npm install reselect
+ + npm install --save redux-form

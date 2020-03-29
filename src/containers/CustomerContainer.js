@@ -15,6 +15,7 @@ class CustomerContainer extends Component {
          children={
             ({match}) => {
                const CustomerControl = match ? CustomerEdit : CustomerData;
+               // return <CustomerControl initialValues={this.props.customer} /> Una forma de pasar parámetros iniciales
                return <CustomerControl {...this.props.customer} />
             }
          }

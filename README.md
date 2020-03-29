@@ -17,7 +17,7 @@ In the project directory, you can run:
 ### `Utilización de Redux`
 
 + Instalar redux
-+ Instalar React-Redux
++ Instalar react-redux
 + Crear un store
 + Vincular el store a la App mediante Provider
 + Generar la acción

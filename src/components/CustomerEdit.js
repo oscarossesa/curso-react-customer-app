@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import { setPropsAsInitial } from '../helpers/setPropsAsInitial';
+import CustomerActions from './CustomersActions';
 
 const isNumber = value => (
    isNaN(Number(value)) && "El campo debe ser un número"
@@ -31,24 +32,27 @@ const MyField = ({ input, meta, type, name, label }) => (
    </div>
 );
 
-const CustomerEdit = ({ name, dni, age }) => {
+const CustomerEdit = ({ name, dni, age, handleSubmit , submitting }) => {
    return (
       <div>
          <h2>Edición del cliente</h2>
-         <form action="">
-            <Field 
-               name="name" 
-               component={MyField} 
+         <form onSubmit={handleSubmit}>
+            <Field
+               name="name"
+               component={MyField}
                label="Nombre"></Field>
-            <Field 
-               name="dni" 
-               component={MyField} 
+            <Field
+               name="dni"
+               component={MyField}
                label="Dni"></Field>
-            <Field 
-               name="age" 
-               component={MyField} 
-               validate={isNumber} 
+            <Field
+               name="age"
+               component={MyField}
+               validate={isNumber}
                label="Edad"></Field>
+            <CustomerActions>
+               <button type="submit" disabled={submitting}>Aceptar</button>
+            </CustomerActions>
          </form>
       </div>
    )
@@ -61,9 +65,9 @@ CustomerEdit.propTypes = {
 };
 
 const CustomerEditForm = reduxForm(
-   { 
-         form: 'CustomerEdit',
-         validate
+   {
+      form: 'CustomerEdit',
+      validate
    })(CustomerEdit);
 
 export default setPropsAsInitial(CustomerEditForm);

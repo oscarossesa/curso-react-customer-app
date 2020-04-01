@@ -9,6 +9,11 @@ import { Route } from 'react-router-dom';
 
 class CustomerContainer extends Component {
 
+   handleSubmit = values => {
+      console.log('hola');
+      console.log(JSON.stringify(values));
+   };
+
    renderBody = () => (
       <Route 
          path="/customers/:dni/edit"
@@ -16,7 +21,7 @@ class CustomerContainer extends Component {
             ({match}) => {
                const CustomerControl = match ? CustomerEdit : CustomerData;
                // return <CustomerControl initialValues={this.props.customer} /> Una forma de pasar parámetros iniciales
-               return <CustomerControl {...this.props.customer} />
+               return <CustomerControl {...this.props.customer} onSubmit={this.handleSubmit} />
             }
          }
       />

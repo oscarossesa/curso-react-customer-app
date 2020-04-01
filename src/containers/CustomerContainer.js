@@ -5,13 +5,16 @@ import AppFrame from './../components/AppFrame';
 import CustomerEdit from './../components/CustomerEdit'
 import CustomerData from './../components/CustomerData'
 import { getCustomerByDni } from '../selectors/customers';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 class CustomerContainer extends Component {
 
    handleSubmit = values => {
-      console.log('hola');
       console.log(JSON.stringify(values));
+   };
+
+   handleOnBack = () => {
+      this.props.history.goBack();
    };
 
    renderBody = () => (
@@ -21,7 +24,12 @@ class CustomerContainer extends Component {
             ({match}) => {
                const CustomerControl = match ? CustomerEdit : CustomerData;
                // return <CustomerControl initialValues={this.props.customer} /> Una forma de pasar parámetros iniciales
-               return <CustomerControl {...this.props.customer} onSubmit={this.handleSubmit} />
+               return ( 
+                  <CustomerControl {...this.props.customer} 
+                     onSubmit={this.handleSubmit}
+                     onBack={this.handleOnBack}
+                  />
+               )
             }
          }
       />
@@ -48,4 +56,4 @@ const mapStateToProps = (state, props) => ({
    customer: getCustomerByDni(state, props)
 })
 
-export default connect(mapStateToProps, null)(CustomerContainer);
+export default withRouter(connect(mapStateToProps, null)(CustomerContainer));

@@ -32,6 +32,8 @@ const MyField = ({ input, meta, type, name, label }) => (
    </div>
 );
 
+const toNumber = value => value && Number(value);
+
 const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack }) => {
    return (
       <div>
@@ -48,8 +50,10 @@ const CustomerEdit = ({ name, dni, age, handleSubmit, submitting, onBack }) => {
             <Field
                name="age"
                component={MyField}
+               type="number"
                validate={isNumber}
-               label="Edad"></Field>
+               label="Edad"
+               parse={toNumber}></Field>
             <CustomerActions>
                <button type="submit" disabled={submitting}>Aceptar</button>
                <button onClick={onBack}>Cancelar</button>

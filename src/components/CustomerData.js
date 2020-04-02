@@ -13,7 +13,6 @@ const CustomerData = ({ name, dni, age, onBack }) => {
             
          </div>
          <CustomersActions>
-            {/* <button></button> */}
             <button onClick={onBack}>Volver</button>
          </CustomersActions>
       </div>

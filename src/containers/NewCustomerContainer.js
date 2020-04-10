@@ -10,7 +10,7 @@ import { SubmissionError } from 'redux-form';
 class NewCustomerContainer extends Component {
 
    handleSubmit = values => {
-      this.props.insertCustomer(values).then(r => {
+      return this.props.insertCustomer(values).then(r => {
          if (r.error) {
             throw new SubmissionError(r.payload);
          }

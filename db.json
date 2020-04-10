@@ -17,6 +17,30 @@
       "dni": "30000003",
       "name": "Oscar Osses",
       "age": 32
+    },
+    {
+      "id": "2VyNrIz",
+      "dni": "30000001",
+      "name": "Gabriel Alejandro",
+      "age": 3
+    },
+    {
+      "id": "g2jaLtC",
+      "dni": "16592485-1",
+      "name": "Piter Veneno",
+      "age": 32
+    },
+    {
+      "id": "nnTT8qo",
+      "dni": "11111",
+      "name": "Oscar Osses",
+      "age": 2
+    },
+    {
+      "id": "S3PadRK",
+      "dni": "12",
+      "name": "KK",
+      "age": 1
     }
   ],
   "posts": [

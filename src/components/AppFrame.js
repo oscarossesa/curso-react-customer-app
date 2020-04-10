@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AppHeader from './AppHeader'
+import AppHeader from './AppHeader';
 
 const AppFrame = ({ header, body }) => {
    return (
@@ -11,12 +11,12 @@ const AppFrame = ({ header, body }) => {
             <div><p>Aplicación Simple de Ejemplo</p></div>
          </div>
       </div>
-   )
-}
+   );
+};
 
 AppFrame.propTypes = {
    header: PropTypes.string.isRequired,
    body: PropTypes.element.isRequired,
-}
+};
 
-export default AppFrame
+export default AppFrame;
